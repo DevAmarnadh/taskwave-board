@@ -1,69 +1,119 @@
-# Welcome to your Lovable project
+# React Kanban Board
 
-## Project info
+A modern, responsive Kanban board application built with React, TypeScript, and Tailwind CSS. This application helps teams manage tasks across different stages of completion with a beautiful and intuitive user interface.
 
-**URL**: https://lovable.dev/projects/5919f0c1-9699-4281-be7c-d881a1e118d7
+![Kanban Board Preview](https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&q=80&w=1200)
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **Drag and Drop**: Intuitive drag-and-drop functionality for moving tasks between columns
+- **Real-time Search**: Filter tasks across all columns as you type
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+- **Modern UI**: Clean and professional interface with smooth animations
+- **Type-Safe**: Built with TypeScript for improved reliability
+- **State Management**: Efficient state management using Zustand
 
-**Use Lovable**
+## Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5919f0c1-9699-4281-be7c-d881a1e118d7) and start prompting.
+- **React** - Frontend framework
+- **TypeScript** - Type safety and improved developer experience
+- **Tailwind CSS** - Utility-first CSS framework
+- **@dnd-kit** - Drag and drop functionality
+- **Zustand** - State management
+- **Vite** - Build tool and development server
+- **Lucide React** - Modern icon set
 
-Changes made via Lovable will be committed automatically to this repo.
+## Getting Started
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js (v14 or higher)
+- npm or yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+The application will be available at `http://localhost:5173`
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── Column.tsx      # Kanban column component
+│   ├── TaskCard.tsx    # Individual task card
+│   ├── SearchBar.tsx   # Search functionality
+│   └── NewTaskDialog.tsx # New task creation modal
+├── store/
+│   └── useTaskStore.ts # Zustand state management
+├── types/
+│   └── task.ts         # TypeScript interfaces
+├── App.tsx             # Main application component
+└── main.tsx           # Application entry point
 ```
 
-**Edit a file directly in GitHub**
+## Usage
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Creating Tasks
 
-**Use GitHub Codespaces**
+1. Click the "New Task" button in the top-right corner
+2. Fill in the task title and description
+3. Click "Create Task" to add it to the "To Do" column
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Moving Tasks
 
-## What technologies are used for this project?
+- Drag and drop tasks between columns
+- Tasks can be moved to any column: To Do, In Progress, Peer Review, or Done
 
-This project is built with .
+### Searching Tasks
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Use the search bar at the top of the board
+- Tasks are filtered in real-time across all columns
+- Search matches task titles
 
-## How can I deploy this project?
+## Development
 
-Simply open [Lovable](https://lovable.dev/projects/5919f0c1-9699-4281-be7c-d881a1e118d7) and click on Share -> Publish.
+### Building for Production
 
-## I want to use a custom domain - is that possible?
+```bash
+npm run build
+```
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+### Linting
+
+```bash
+npm run lint
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [React Documentation](https://react.dev)
+- [Tailwind CSS](https://tailwindcss.com)
+- [@dnd-kit](https://dndkit.com)
+- [Zustand](https://github.com/pmndrs/zustand)
